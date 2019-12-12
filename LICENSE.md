@@ -1,7 +1,7 @@
 The MIT License
 ===============
 
-Copyright (c) **2013-2015 Manfred Touron <m@42.am> ([@moul](https://twitter.com/moul))**
+Copyright (c) **2019 Colin Smith <smithcolina@gmail.com>**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

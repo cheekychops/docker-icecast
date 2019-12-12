@@ -1,5 +1,5 @@
 icecast:
-  image: moul/icecast:latest
+  image: cheekychops/icecast:latest
   volumes:
   - logs:/var/log/icecast2
   - /etc/localtime:/etc/localtime:ro 
