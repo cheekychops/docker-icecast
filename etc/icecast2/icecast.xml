@@ -171,4 +171,9 @@
         </changeowner>
         -->
     </security>
+
+    <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+        <header name="X-Robots-Tag" value="index, noarchive" />
+    </http-headers>
 </icecast>
