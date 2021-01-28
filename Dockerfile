@@ -24,6 +24,9 @@ RUN useradd icecast
 ADD ./start.sh /start.sh
 ADD ./etc /etc
 
+COPY ./etc/status-json.xsl /usr/local/share/icecast/web
+COPY ./etc/xml2json.xslt /usr/local/share/icecast/web
+
 ENV ICECAST_LOCATION=Earth
 ENV ICECAST_ADMIN=earthling@earth
 ENV ICECAST_MAX_LISTENERS=1000
