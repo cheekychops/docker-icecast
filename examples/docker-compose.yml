@@ -1,12 +1,22 @@
 icecast:
-  image: cheekychops/icecast:latest
+  image: cheekychops/docker-icecast
   volumes:
   - logs:/var/log/icecast2
   - /etc/localtime:/etc/localtime:ro 
   environment:
-  - ICECAST_SOURCE_PASSWORD=changeme
-  - ICECAST_ADMIN_PASSWORD=changeme
-  - ICECAST_PASSWORD=changeme
-  - ICECAST_RELAY_PASSWORD=changeme
+  - ICECAST_SOURCE_PASSWORD
+  - ICECAST_ADMIN_PASSWORD
+  - ICECAST_PASSWORD
+  - ICECAST_RELAY_PASSWORD
+  - ICECAST_ADMIN
+  - ICECAST_HOSTNAME
+  - ICECAST_LOCATION
+  - ICECAST_MAX_SOURCES
+  - ICECAST_MAX_LISTENERS
+  - ICECAST_X_FORWARDED_FOR
+  - ICECAST_LOG_LEVEL
+  env_file: .env
   ports:
   - 8000:8000
+  restart: always
+

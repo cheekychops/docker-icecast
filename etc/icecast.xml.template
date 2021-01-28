@@ -1,0 +1,55 @@
+<icecast>
+    <location>$ICECAST_LOCATION</location>
+    <admin>$ICECAST_ADMIN</admin>
+
+    <limits>
+        <clients>$ICECAST_MAX_LISTENERS</clients>
+        <sources>$ICECAST_MAX_SOURCES</sources>
+        <queue-size>$ICECAST_QUEUE_SIZE</queue-size>
+        <client-timeout>$ICECAST_CLIENT_TIMEOUT</client-timeout>
+        <header-timeout>$ICECAST_HEADER_TIMEOUT</header-timeout>
+        <source-timeout>$ICECAST_SOURCE_TIMEOUT</source-timeout>
+        <burst-size>$ICECAST_BURST_SIZE</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>$ICECAST_SOURCE_PASSWORD</source-password>
+        <relay-password>$ICECAST_RELAY_PASSWORD</relay-password>
+        <admin-user>admin</admin-user>
+        <admin-password>$ICECAST_ADMIN_PASSWORD</admin-password>
+    </authentication>
+
+    <directory>
+        <yp-url-timeout>$ICECAST_YP_URL_TIMEOUT</yp-url-timeout>
+        <yp-url>$ICECAST_YP_URL</yp-url>
+    </directory>
+
+    <hostname>$ICECAST_HOSTNAME</hostname>
+
+    <listen-socket>
+        <port>$ICECAST_LISTEN_SOCKET</port>
+    </listen-socket>
+
+    <fileserve>1</fileserve>
+
+    <paths>
+        <logdir>/var/log/icecast</logdir>
+        <webroot>/usr/local/share/icecast/web</webroot>
+        <adminroot>/usr/local/share/icecast/admin</adminroot>
+        <x-forwarded-for>$ICECAST_X_FORWARDED_FOR</x-forwarded-for>
+        <alias source="/" dest="/index.html"/>
+    </paths>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+        <playlistlog>playlist.log</playlistlog>
+      	<loglevel>$ICECAST_LOG_LEVEL</loglevel>
+      	<logsize>$ICECAST_LOG_SIZE</logsize>
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+    </security>
+
+</icecast>

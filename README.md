@@ -32,23 +32,23 @@ Docker-compose
 
 ```yaml
 icecast:
-  image: cheekychops/icecast-kh
+  image: cheekychops/docker-icecast
   volumes:
   - logs:/var/log/icecast2
   - /etc/localtime:/etc/localtime:ro
   environment:
-  - ICECAST_SOURCE_PASSWORD=aaa
-  - ICECAST_ADMIN_PASSWORD=bbb
-  - ICECAST_PASSWORD=ccc
-  - ICECAST_RELAY_PASSWORD=ddd
-  - ICECAST_LOCATION=Earth
-  - ICECAST_ADMIN=john@doe.com
-  - ICECAST_HOSTNAME=stream.doe.com
-  - ICECAST_MAX_SOURCES=2
-  - ICECAST_MAX_LISTENERS=1000
-  - ICECAST_X_FORWARDED_FOR=*
-  ports:
-  - 8000:8000
+  - ICECAST_SOURCE_PASSWORD
+  - ICECAST_ADMIN_PASSWORD
+  - ICECAST_PASSWORD
+  - ICECAST_RELAY_PASSWORD
+  - ICECAST_ADMIN
+  - ICECAST_HOSTNAME
+  - ICECAST_LOCATION
+  - ICECAST_MAX_SOURCES
+  - ICECAST_MAX_LISTENERS
+  - ICECAST_X_FORWARDED_FOR
+  - ICECAST_LOG_LEVEL
+  env_file: .env
 ```
 
 ## License

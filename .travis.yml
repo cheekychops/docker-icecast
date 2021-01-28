@@ -2,4 +2,4 @@ install:
   - curl -sLo - http://j.mp/install-travis-docker | sh -xe
 
 script:
-  - ./run 'docker build -t cheekychops/icecast . && docker run cheekychops/icecast echo Build succeed'
+  - ./run 'docker build -t cheekychops/docker-icecast . && docker run cheekychops/docker-icecast echo Build succeed'
